@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from 'react-redux';
-import { delContact } from "redux/contactsSlice";
+import { deleteContact } from "redux/contactsSlice";
 import { ContactStyle } from "./contacts.styled";
 import { ButtonsStyle } from "components/buttonsStyle.styled";
 import PropTypes from 'prop-types';
@@ -30,7 +30,7 @@ export const Contacts = () => {
                         <p>Number:</p>
                         <span>{number}</span>
                         <ButtonsStyle
-                            onClick={() => dispatch(delContact(id))
+                            onClick={() => dispatch(deleteContact(id))
                             }
                         >Delete</ButtonsStyle>
                     </li>
